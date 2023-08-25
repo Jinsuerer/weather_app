@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.3px;    
+}    
+body{
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: 100vh;
+    backdrop-filter:blur(10px) ;
+    /* display:grid; */
+    place-items:center;
+    animation: theme 21s linear infinite;
+         
+}
+body::after{
+    content: "";
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);        
+        display: block;
+        position: fixed;
+        z-index: -1;
+        left:25px;
+        top: 75px;
+        /* width: 100vw;  
+        height: 100vh;  */
+        width: 25%;
+        height: 10vmax;
+        background: rgba(0,0,0,0.05);
+        animation: background 90s linear infinite;
+}
+body::before{
+    content: "";
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);      
+        display: block;
+        position: fixed;
+        z-index: -1;
+        right: 25px;
+        top:75px ;
+        /* width: 100vw;  
+        height: 100vh;  */
+        width: 25%;
+        height: 10vmax;
+        background: rgba(0,0,0,0.05);
+        animation: background 90s linear infinite;
+}
+body::after{
+    /* left: 15vw; 
+    top: 25px;  */
+}
+body::before{
+    right: 1vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+@keyframes theme {
+    0% {
+        background: #74C390;
+    }
+    
+    16% {
+        background: #5DBDB6;
+    }
+    
+    33% {
+        background: #59D4E1;
+    }
+    
+    50% {
+        background: #51BCE8;
+    }
+    
+    66% {
+        background: #FA5374;
+    }    
+    
+    83% {
+        background: #E46653;
+    }
+
+    100% {
+        background: #74C390;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+section.top-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:20%;
+    /* position: relative; */
+}
+form>.input{
+    width: 250px;
+    height: 2.5rem;
+    border-radius: 1rem;
+    outline: none;
+    background: none;
+    border: 3px inset wheat;   
+    text-indent: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+    text-transform:uppercase;
+
+}
+form>.button{
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    outline: none;
+    background: none;
+    border: 2px inset wheat;
+    cursor: pointer;
+    color: rgb(255, 255, 255);   
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+}
+form{
+    position: relative;
+}
+
+section.top-banner form .msg{
+    position: absolute;    
+    top: 45px;    
+    left: 15px;
+    color: rgb(214, 221, 219);
+}
+/***** FOOTER *****/
+.footerDiv{
+    writing-mode: vertical-lr;
+    position: fixed;
+    bottom:0;
+    left: 25px;
+    font-weight: 900;
+    color: rgba(254, 254, 255, 0.322);   
+}
+/****** SECTİON .AJAX-SECTİON *******/
+.ajax-section{    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 46.1vh; */
+    height: 66.1%;    
+}
+.sectionDiv{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;    
+    flex-wrap: wrap;
+    width: 80%;
+    margin:0 auto;
+    justify-content:center;   
+}
+.sectionDiv ul{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    width: 350px;
+    height: 250px;    
+    padding: 1rem;  
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    object-fit:cover;        
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);        
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s; 
+}
+.sectionDiv ul:hover{
+    transform:perspective(800px) rotateY(0deg);
+    opacity:1;
+}
+.li{
+    list-style-type: none;   
+    text-align: center;
+
+}
+.nameClass{
+    font-size: 3rem;
+}
+
+figcaption{
+
+    text-transform: uppercase
+}
+
